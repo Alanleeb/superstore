@@ -1,0 +1,20 @@
+<h1><%= @department.name %> - <%= @item.name %></h1>
+<hr />
+<table>
+  <tr>
+    <th>Item</th>
+    <th>Price</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><%= @item.name %></td>
+    <td>$<%= @item.price %></td>
+    <td><%= @item.discription %></td>
+  </tr>
+</table>
+<hr />
+<%= link_to 'Back to Departments', department_items_path(@department) %>
+<br />
+<%= link_to 'Edit Item',  edit_department_item_path([@department, @item]) %>
+<br />
+<%= link_to 'Delete Item', [@department, @item], method: :delete %>
